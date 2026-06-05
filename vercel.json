@@ -1,19 +1,16 @@
 {
-  "functions": {
-    "backend/app.py": {
+  "experimentalServices": {
+    "frontend": {
+      "root": "frontend",
+      "routePrefix": "/",
+      "framework": "vite"
+    },
+    "backend": {
+      "root": "backend",
+      "routePrefix": "/api",
+      "builder": "@vercel/python",
       "runtime": "python3.12",
-      "maxDuration": 30
+      "entrypoint": "app.py"
     }
-  },
-  "buildCommand": "npm run build",
-  "outputDirectory": "frontend/dist",
-  "devCommand": "npm run dev",
-  "installCommand": "npm install",
-  "framework": "vite",
-  "rewrites": [
-    {
-      "source": "/api/(.*)",
-      "destination": "/backend/app.py"
-    }
-  ]
+  }
 }
