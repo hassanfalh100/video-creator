@@ -8,7 +8,7 @@
     "backend": {
       "root": "backend",
       "routePrefix": "/api",
-      "framework": "python",
+      "runtime": "python3.12",
       "entrypoint": "app.py"
     }
   }
